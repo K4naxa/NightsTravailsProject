@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContainer {
+  display: grid;
+  width: 960px;
+  grid-template-areas: "menu board board board";
+  justify-items: center;
+
+  & .menu {
+    grid-area: menu;
+    align-items: center;
+    justify-items: center;
+  }
+  & .boardContainer {
+    grid-area: board;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    padding: 1rem;
+    margin: 1rem;
+    background-color: antiquewhite;
+    box-shadow: 0px 5px 10px black;
+
+    & .cell {
+      padding: 1rem;
+
+      &.horsePosition {
+        background: url(./icons8-knight-66.png);
+      }
+    }
+  }
+}
